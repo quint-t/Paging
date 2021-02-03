@@ -20,6 +20,8 @@ class AbstractPaging {
     virtual int getPageFaultCount() { return mPageFault; }
     // Очистка данных, возврат к начальному состоянию
     virtual void clear() = 0;
+    // Виртуальный деструктор (обязательно)
+    virtual ~AbstractPaging() {}
 
   protected:
     // Максимальное число страниц в памяти
